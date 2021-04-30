@@ -11,10 +11,14 @@
     </select>
 
     <label for="trade.entry">Entry: </label>
-    <input v-model="trade.entry" type="Number" step="0.00000001" label="Entry" />
+    <input v-model="trade.entry" type="Number" step="0.01" label="Entry" />
 
     <label for="trade.stop">Stop: </label>
-    <input v-model="trade.stop" type="Number" step="0.00000001" label="Stop" />
+    <input v-model="trade.stop" type="Number" step="0.01" label="Stop" />
+
+    <label for="trade.take">Take: </label>
+    <input v-model="trade.take" type="Number" step="0.01" label="Take" />
+
   </div>
 </template>
 
@@ -22,14 +26,13 @@
 import Trade from '../model/Trade.js'
 
 export default {
+  props: {
+    trade: Trade
+  },
   data () {
     return {
-      name: "Trade",
-      trade: {}
+      name: "Trade"
     }
-  },
-  created () {
-    this.trade = new Trade() // use model class from the Api
   },
   methods: {
     getPairs() {
