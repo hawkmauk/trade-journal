@@ -40,6 +40,14 @@ export default class Trade {
     if ( this.entry > this.stop ) { return false }
     return true;
   }
+
+  calculateDrawdown(size)
+  {
+    // If any entry, stop or take are 0 return 0
+    if ( this.entry * this.stop * size == 0 ) { return 0 }
+    let result = ( 100 / size ) * this.getRisk()
+    return result
+  }
 }
 Trade.Pair = {
   BTCUSD: "BTCUSD",

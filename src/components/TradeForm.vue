@@ -1,23 +1,30 @@
 <template>
-  <div>
-    <h1>{{ name }}</h1>
-    <label for="trade.pair">Trading Pair: </label>
-    <select v-model="trade.pair"
-      data-test="selectPair"
-      label="Pair">
-        <option disabled value="">select pair</option>
-        <option v-for="pair in getPairs()"
-                v-bind:key="pair">{{ pair }}</option>      
-    </select>
+  <div id="TradeForm">
+    <div class="row">
+      <label for="trade.pair">Trading Pair: </label>
+      <select v-model="trade.pair"
+        data-test="selectPair"
+        label="Pair">
+          <option disabled value="">select pair</option>
+          <option v-for="pair in getPairs()"
+                  v-bind:key="pair">{{ pair }}</option>      
+      </select>
+    </div>
 
-    <label for="trade.entry">Entry: </label>
-    <input v-model="trade.entry" type="Number" step="0.01" label="Entry" />
+    <div class="row">
+      <label for="trade.entry">Entry: </label>
+      <input v-model="trade.entry" type="Number" step="0.01" label="Entry" />
+    </div>
 
-    <label for="trade.stop">Stop: </label>
-    <input v-model="trade.stop" type="Number" step="0.01" label="Stop" />
+    <div class="row">
+      <label for="trade.stop">Stop: </label>
+      <input v-model="trade.stop" type="Number" step="0.01" label="Stop" />
+    </div>
 
-    <label for="trade.take">Take: </label>
-    <input v-model="trade.take" type="Number" step="0.01" label="Take" />
+    <div class="row">
+      <label for="trade.take">Take: </label>
+      <input v-model="trade.take" type="Number" step="0.01" label="Take" />
+    </div>
 
   </div>
 </template>
@@ -42,3 +49,19 @@ export default {
 }
 </script>
 
+<style>
+#TradeForm {
+  float: left;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+label {
+  display:block;
+  float: left;
+  width: 200px
+}
+</style>

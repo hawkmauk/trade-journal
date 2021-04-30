@@ -1,23 +1,30 @@
 <template>
   <div>
-    <h1>{{ name }}</h1>
-    <label for="entry.conviction">Conviction: </label>
-    <select v-model="entry.conviction"
-      data-test="selectConviction"
-      label="Conviction">
-        <option disabled value="">select</option>
-        <option v-for="value in getConvictions()"
-                v-bind:key="value">{{ value }}</option>      
-    </select>
+    <div class="row">
+      <label for="entry.conviction">Conviction: </label>
+      <select v-model="entry.conviction"
+        data-test="selectConviction"
+        label="Conviction">
+          <option disabled value="">select</option>
+          <option v-for="value in getConvictions()"
+                  v-bind:key="value">{{ value }}</option>      
+      </select>
+    </div>
 
-    <label for="entry.strategy">Strategy: </label>
-    <input v-model="entry.strategy" label="Strategy" />
+    <div class="row">
+      <label for="entry.strategy">Strategy: </label>
+      <input v-model="entry.strategy" label="Strategy" />
+    </div>
 
-    <label for="entry.description">Description: </label>
-    <textarea v-model="entry.description" label="Description" />
+    <div class="row">
+      <label for="entry.description">Description: </label>
+      <textarea v-model="entry.description" label="Description" />
+    </div>
 
-    <label for="entry.url">Chart: </label>
-    <input v-model="entry.url" type="url"  label="Strategy" />
+    <div class="row">
+      <label for="entry.url">Chart: </label>
+      <input v-model="entry.url" type="url"  label="Strategy" />
+    </div>
   </div>
 </template>
 
@@ -45,3 +52,25 @@ export default {
 }
 </script>
 
+<style>
+#EntryForm{
+  float:left;
+  max-width: 300px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+label {
+  display:block;
+  float: left;
+  width: 200px
+}
+input,textarea,select {
+  width: 100%;
+}
+textarea {
+  height: 100px;
+}
+</style>
