@@ -1,19 +1,10 @@
-enum TradePair
+export default class Position
 {
-  BTCGBP = "BTCGBP";
-}
+    size = 0;
+    leverage = 0;
+    date = new Date();
 
-class Position
-{
-  constructor(pair,stop,take,trades){
-    this.pair = pair;
-    this.stop = stop;
-    this.take = take;
-    this.trades = trades;
-  }
-}
-
-module.exports = {
-  TradePair,
-  Position
+    getDateInYYYYMMDD(){
+      return this.date.toISOString().split('T')[0]
+    }
 }

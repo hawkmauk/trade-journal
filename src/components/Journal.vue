@@ -1,11 +1,15 @@
 <template>
 <div id="journal">
-  <journal-form :editing="true"></journal-form>
+  <entry-form></entry-form>
+  <trade-form></trade-form>
+  <position-form></position-form>
 </div>
 </template>
 
 <script>
-import JournalForm from './JournalForm.vue'
+import TradeForm from './TradeForm.vue'
+import PositionForm from './PositionForm.vue'
+import EntryForm from './EntryForm.vue'
 
 export default {
   data () {
@@ -14,7 +18,9 @@ export default {
     }
   },
   components: {
-    JournalForm
+    TradeForm,
+    PositionForm,
+    EntryForm
   }
 }
 </script>

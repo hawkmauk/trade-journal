@@ -1,15 +1,12 @@
-class Entry
+export default class Entry
 {
-  constructor(position,conviction,strategy,description,success)
-  {
-    this.position = position;
-    this.conviction = conviction;
-    this.strategy = strategy;
-    this.description = description;
-    this.success = success;
-  }
+    conviction = Entry.Conviction.LOW;
+    strategy = '';
+    description = '';
+    url = undefined;
+    success = undefined;
+    position = undefined;
+    trade = undefined;
 }
 
-module.exports = {
-  Entry
-}
+Entry.Conviction = { HIGH: "High", MED: "Medium", LOW: "Low" }

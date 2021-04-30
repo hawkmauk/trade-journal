@@ -1,14 +1,12 @@
-class Trade
-{
-  constructor(price,size,leverage,date)
-  {
-    this.price = entry;
-    this.size = size;
-    this.leverage = leverage;
-    this.date = date;
-  }
-}
+export default class Trade {
 
-module.exports = {
-  Trade
+  pair = ''
+  entry = 0.0
+  stop = 0.0
+  take = 0.0
+
+}
+Trade.Pair = {
+  BTCUSD: "BTCUSD",
+  BTCGBP: "BTCGBP"
 }
