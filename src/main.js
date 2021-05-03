@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 
 const routes = [
   { path: '/', name: 'Home', component: require('./components/Home.vue').default },
-  { path: '/journal', name: 'journal', component: require('./components/Journal.vue').default },
+  { path: '/journal', name: 'journal', component: require('./components/journal/Main.vue').default },
 ]
 
 const router = new VueRouter({

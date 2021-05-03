@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Position from '../model/Position.js'
+import Position from '../../model/Position.js'
 
 export default {
   data () {

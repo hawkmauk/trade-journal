@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Entry from '../model/Entry.js'
+import Entry from '../../model/Entry.js'
 
 export default {
   data () {

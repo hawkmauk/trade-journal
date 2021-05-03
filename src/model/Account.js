@@ -1,10 +1,17 @@
-class Account
+export default class Account
 {
-  constructor(balance){
-    this.balance = balance;
-  }
-}
+  balance = 0;
 
-module.exports = {
-  Account
+  deposit(amount)
+  {    
+    this.balance += parseInt(amount);
+    console.log(this.balance)
+  }
+
+  withdraw(amount)
+  {
+    if (amount > this.balance) { throw "Insufficiant Funds" }
+    this.balance -= parseInt(amount);
+  }
+
 }

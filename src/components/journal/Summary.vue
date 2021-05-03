@@ -1,6 +1,6 @@
 <template>
-  <div id="TradeView">
-    <table class="trade-view">
+  <div id="Summary">
+    <table class="summary">
       <tr><td>Trading Pair</td><td>{{ trade.pair }}</td></tr>
       <tr><td>Short</td><td>{{ trade.isShort() }}</td></tr>
       <tr><td>Risk</td><td>{{ trade.getRisk().toFixed(2) }}</td></tr>
@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import Trade from '../model/Trade.js'
-import Position from '../model/Position.js'
-import Entry from '../model/Entry.js'
+import Trade from '../../model/Trade.js'
+import Position from '../../model/Position.js'
+import Entry from '../../model/Entry.js'
 
 export default{
   props:{

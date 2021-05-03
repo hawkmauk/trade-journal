@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Trade from '../model/Trade.js'
+import Trade from '../../model/Trade.js'
 
 export default {
   props: {
